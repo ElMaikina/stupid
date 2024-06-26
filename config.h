@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Space Mono for Powerline:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Space Mono for Powerline:pixelsize=11:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -102,7 +102,7 @@ static const char *colorname[] = {
 	"#04f0a5",
 	"#075964",
 	"#e84177",
-	"#25cff2",
+	"#15bfff",
 	"#e5e5e5",
 
 	/* 8 bright colors */
