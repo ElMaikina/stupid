@@ -1218,6 +1218,9 @@ tsetchar(Rune u, const Glyph *attr, int x, int y)
 	term.dirty[y] = 1;
 	term.line[y][x] = *attr;
 	term.line[y][x].u = u;
+
+	if (isboxdraw(u))
+		term.line[y][x].mode |= ATTR_BOXDRAW;
 }
 
 void
@@ -1228,6 +1231,7 @@ tclearregion(int x1, int y1, int x2, int y2)
 
 	if (x1 > x2)
 		temp = x1, x1 = x2, x2 = temp;
+		
 	if (y1 > y2)
 		temp = y1, y1 = y2, y2 = temp;
 
